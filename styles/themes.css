@@ -1,0 +1,200 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 1s ease-in-out, color 0.6s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+  }
+  
+
+/* Área principal */
+#app {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Cabeçalho */
+#app h1 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+#app h2 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: inherit;
+}
+
+/* Blocos */
+#today,
+#forecast {
+    margin-top: 10px;
+}
+
+#today p {
+    font-size: 1.1rem;
+}
+
+/* Cada dia da previsão */
+#forecast div {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s;
+}
+
+#forecast div:hover {
+    transform: scale(1.02);
+}
+
+/* Animação central */
+#animation {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Temas visuais */
+.default-theme {
+    background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+    color: white;
+}
+
+.sunny-theme {
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    color: #222;
+  }
+  
+  .rainy-theme {
+    background: linear-gradient(135deg, #5f72bd, #9b23ea);
+    color: white;
+  }
+  
+  .cloudy-theme {
+    background: linear-gradient(135deg, #d7d2cc, #304352);
+    color: white;
+  }
+  
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    #app {
+        padding: 1.2rem;
+    }
+
+    #app h1 {
+        font-size: 1.6rem;
+    }
+
+    #app h2 {
+        font-size: 1.1rem;
+    }
+
+    #today p {
+        font-size: 1rem;
+    }
+
+    #forecast div {
+        font-size: 0.95rem;
+    }
+
+    #animation {
+        max-width: 220px;
+    }
+}
+
+.forecast-day {
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.forecast-day:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.03);
+}
+/* Transições suaves */
+
+  
+  #today, #animation {
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+  }
+  
+  /* Quando visível */
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #app {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  #app.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  #app.fade-in {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .weekend {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px dashed #fff;
+  }
+  #search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 20px 0;
+  }
+  
+  #search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  #search-button {
+    padding: 8px 16px;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #search-button:hover {
+    background-color: #4338ca;
+  }
+  #rain-hours {
+    margin-top: 20px;
+  }
+  
+  #rain-times p {
+    margin: 4px 0;
+    font-size: 15px;
+  }
+  

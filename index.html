@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clima Animado</title>
+  <link rel="stylesheet" href="styles/themes.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"></script>
+</head>
+<body class="default-theme">
+    <div id="app">
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar cidade..." />
+            <button id="search-button">Buscar</button>
+        </div>
+        <h1>Tempo em <span id="city"></span></h1>
+        <div id="animation" class="visible" style="width: 200px; height: 200px; margin: auto;"></div>
+        <div id="today" class="visible"></div>
+        <div id="forecast"></div>
+        <div id="rain-hours">
+            <h2>Chuva prevista</h2>
+            <div id="rain-times"></div>
+          </div>
+      </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
